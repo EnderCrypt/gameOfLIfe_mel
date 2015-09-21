@@ -10,6 +10,7 @@ public class Main
 			screenSize.width = Integer.parseInt(args[0]);
 			screenSize.height = Integer.parseInt(args[1]);
 			}
+		Printer.init(screenSize);
 		
 		System.out.println("tjo");
 		}
