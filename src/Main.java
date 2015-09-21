@@ -14,5 +14,14 @@ public class Main
 		Printer.init(screenSize);
 		// initialises the simulation
 		Simulation.init(screenSize);
+		// start simulation
+		while (true)
+			{
+			boolean[][] life = Simulation.update();
+			//Printer
+			//<---- ANDVÄND boolean[][] life för att ria om skärmen här
+			//sleep
+			try{Thread.sleep(1000);}catch(InterruptedException e){e.printStackTrace();}
+			}
 		}
 	}
