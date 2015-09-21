@@ -14,9 +14,9 @@ public class Simulation
 		{
 		boolean[][] nextLife = new boolean[simulationSize.width][simulationSize.height];
 		
-		for (int y=0;y<simulationSize.width;y++)
+		for (int y=0;y<simulationSize.height-1;y++)
 			{
-			for (int x=0;x<simulationSize.width;x++)
+			for (int x=0;x<simulationSize.width-1;x++)
 				{
 				boolean alive = life[x][y];
 				int surr = getSurrounding(new Point(x,y));
