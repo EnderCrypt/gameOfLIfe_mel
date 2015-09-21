@@ -65,4 +65,20 @@ public class Printer
 		} else
 			return false;
 	}
+	
+	public static void printBool(boolean [][] life)
+	{
+		for(int x=0;x<screenSize.width-1;x++)
+		{
+			for(int y=0;y<screenSize.height-1;y++)
+			{
+				if(life[x][y])
+					System.out.print('@');
+				else
+					System.out.print('.');
+					//put(point.x, point.)
+			}
+			System.out.println();
+		}
+	}
 }//class
