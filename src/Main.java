@@ -24,7 +24,7 @@ public class Main
 			System.out.println("POPULATION: "+population+" out of "+total);
 			Printer.printBool(life);
 			//sleep
-			try{Thread.sleep(1000);}catch(InterruptedException e){e.printStackTrace();}
+			try{Thread.sleep(250);}catch(InterruptedException e){e.printStackTrace();}
 			}
 		}
 	}
