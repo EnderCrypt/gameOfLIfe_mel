@@ -18,11 +18,13 @@ public class Main
 		while (true)
 			{
 			int total = (int)(screenSize.width*screenSize.height);
+			long millis = System.currentTimeMillis();
 			int population = Simulation.populate((int)(total*0.05),(int)(total*0.2));
 			boolean[][] life = Simulation.update();
 			//Printer
-			System.out.println("POPULATION: "+population+" out of "+total);
 			Printer.printBool(life);
+			//print delta of execution
+			System.out.println("POPULATION: "+population+" | MAX: "+total+" | execution delta: "+(System.currentTimeMillis()-millis)+" Milis");
 			//sleep
 			try{Thread.sleep(250);}catch(InterruptedException e){e.printStackTrace();}
 			}
