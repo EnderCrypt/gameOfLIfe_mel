@@ -17,7 +17,7 @@ public class Main
 		// start simulation
 		while (true)
 			{
-			Simulation.populate(100);
+			Simulation.populate((int)((screenSize.width*screenSize.height)*0.2));
 			boolean[][] life = Simulation.update();
 			//Printer
 			Printer.printBool(life);
