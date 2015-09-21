@@ -1,5 +1,4 @@
 import java.awt.Dimension;
-import java.awt.Point;
 
 public class Printer
 {

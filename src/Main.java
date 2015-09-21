@@ -17,10 +17,11 @@ public class Main
 		// start simulation
 		while (true)
 			{
-			Simulation.populate((int)((screenSize.width*screenSize.height)*0.2));
+			int total = (int)(screenSize.width*screenSize.height);
+			int population = Simulation.populate((int)(total*0.05),(int)(total*0.2));
 			boolean[][] life = Simulation.update();
 			//Printer
-			System.out.println("---------");
+			System.out.println("POPULATION: "+population);
 			Printer.printBool(life);
 			//sleep
 			try{Thread.sleep(1000);}catch(InterruptedException e){e.printStackTrace();}
