@@ -20,7 +20,7 @@ public class Main
 			Simulation.populate(100);
 			boolean[][] life = Simulation.update();
 			//Printer
-			//<---- ANDVÄND boolean[][] life för att rita om skärmen här
+			Printer.printBool(life);
 			//sleep
 			try{Thread.sleep(1000);}catch(InterruptedException e){e.printStackTrace();}
 			}
