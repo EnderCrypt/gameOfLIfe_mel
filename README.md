@@ -1,4 +1,4 @@
-# gameOfLIfe
+# GameOfLIfe
 
 Game of life by magnus (https://github.com/EnderCrypt) &amp; mel (https://github.com/MelEnt)
 
