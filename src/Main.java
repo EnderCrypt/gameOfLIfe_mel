@@ -21,7 +21,7 @@ public class Main
 			int population = Simulation.populate((int)(total*0.05),(int)(total*0.2));
 			boolean[][] life = Simulation.update();
 			//Printer
-			System.out.println("POPULATION: "+population);
+			System.out.println("POPULATION: "+population+" out of "+total);
 			Printer.printBool(life);
 			//sleep
 			try{Thread.sleep(1000);}catch(InterruptedException e){e.printStackTrace();}
