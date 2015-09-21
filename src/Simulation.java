@@ -10,6 +10,37 @@ public class Simulation
 		life = new boolean[simulationSize.width][simulationSize.height];
 		Simulation.simulationSize = simulationSize;
 		}
+	public static void populate(int minimum)
+		{
+		// count amount of living
+		int living = 0;
+		for (int y=0;y<simulationSize.height-1;y++)
+			{
+			for (int x=0;x<simulationSize.width-1;x++)
+				{
+				boolean alive = life[x][y];
+				if (alive)
+					{
+					living++;
+					if (living > minimum)
+						{
+						return;
+						}
+					}
+				}
+			}
+		// populate randomly
+		while (living < minimum)
+			{
+			int x = (int) (Math.random()*simulationSize.width);
+			int y = (int) (Math.random()*simulationSize.height);
+			if (life[x][y] == false)
+				{
+				life[x][y] = true;
+				living++;
+				}
+			}
+		}
 	public static boolean[][] update() // will return the game as 2D array after updating
 		{
 		boolean[][] nextLife = new boolean[simulationSize.width][simulationSize.height];

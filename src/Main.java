@@ -17,6 +17,7 @@ public class Main
 		// start simulation
 		while (true)
 			{
+			Simulation.populate(100);
 			boolean[][] life = Simulation.update();
 			//Printer
 			//<---- ANDVÄND boolean[][] life för att rita om skärmen här
