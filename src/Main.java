@@ -5,13 +5,14 @@ public class Main
 	public static Dimension screenSize = new Dimension(100,30);
 	public static void main(String[] args)
 		{
+		// gets the screensize as parameter
 		if (args.length >= 2)
 			{
 			screenSize.width = Integer.parseInt(args[0]);
 			screenSize.height = Integer.parseInt(args[1]);
 			}
 		Printer.init(screenSize);
-		
-		System.out.println("tjo");
+		// initialises the simulation
+		Simulation.init(screenSize);
 		}
 	}
