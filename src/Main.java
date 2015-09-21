@@ -2,7 +2,7 @@ import java.awt.Dimension;
 
 public class Main
 	{
-	public static Dimension screenSize = new Dimension(53,180);
+	public static Dimension screenSize = new Dimension(55,182);
 	public static void main(String[] args)
 		{
 		// gets the screensize as parameter
@@ -22,9 +22,10 @@ public class Main
 			int population = Simulation.populate((int)(total*0.05),(int)(total*0.2));
 			boolean[][] life = Simulation.update();
 			//Printer
+			System.out.println();
 			Printer.printBool(life);
 			//print delta of execution
-			System.out.println("POPULATION: "+population+" | MAX: "+total+" | execution delta: "+(System.currentTimeMillis()-millis)+" Milis");
+			System.out.print("POPULATION: "+population+" | MAX: "+total+" | execution delta: "+(System.currentTimeMillis()-millis)+" Milis");
 			//sleep
 			try{Thread.sleep(250);}catch(InterruptedException e){e.printStackTrace();}
 			}
