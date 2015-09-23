@@ -2,7 +2,7 @@ import java.awt.Dimension;
 
 public class Main
 	{
-	public static Dimension screenSize = new Dimension(55,182);
+	public static Dimension screenSize = new Dimension(182,56);
 	public static void main(String[] args)
 		{
 		// gets the screensize as parameter
