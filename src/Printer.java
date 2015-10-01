@@ -13,20 +13,20 @@ public class Printer
 
 	public static void printBool(boolean [][] life)
 	{
-		
+		StringBuilder output = new StringBuilder();
 		for(int y=0;y<screenSize.height-1;y++)
 		{
-			String output="";
 			for(int x=0;x<screenSize.width-1;x++)
 			{
 				if(life[x][y])
-					output=output+"@";
+					output.append('@');
 				
 				else
-					output=output+".";
+					output.append('.');
 			}			
-			System.out.println(output); //output=output+"\n";
+			output.append('\n'); //output=output+"\n";
 		}
+		System.out.println(output);
 		
 		
 	}
